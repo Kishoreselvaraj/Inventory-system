@@ -1,6 +1,10 @@
 .dashboard{
     display: flex;
-    margin-left: 300px;
-    width: calc(100% - 300px);
+    margin-left: 400px;
+    width: calc(100% - 400px);
     height: 100vh;
+    .details{
+        display: flex;
+        flex-direction: row;
+    }
 }
