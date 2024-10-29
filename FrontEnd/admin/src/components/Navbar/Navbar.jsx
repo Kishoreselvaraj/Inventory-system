@@ -7,9 +7,9 @@ function Navbar() {
         <div className="sidebar">
             <nav>
                 <ul>
-                    <li><Link to={''}>Overview</Link></li>
-                    <li><Link to={''}>Add product</Link></li>
-                    <li><Link to={''}>Users</Link></li>
+                    <li><Link to={'/dashboard'}>Overview</Link></li>
+                    <li><Link to={'/addproduct'}>Add product</Link></li>
+                    <li><Link to={'/users'}>Users</Link></li>
                 </ul>
             </nav>
         </div>

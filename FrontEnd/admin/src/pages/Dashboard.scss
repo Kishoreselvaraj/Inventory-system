@@ -1,10 +1,71 @@
-.dashboard{
+.dashboard {
     display: flex;
-    margin-left: 400px;
-    width: calc(100% - 400px);
+    margin-left: 400px; // Adjusts the dashboard width
+    width: calc(100% - 400px); // Ensures the width is responsive
     height: 100vh;
-    .details{
+    flex-direction: column; // Aligns children in a column layout
+
+    .details {
         display: flex;
         flex-direction: row;
+        height: 40vh; // Height for the cards section
+        justify-content: space-around; // Space between cards
+    }
+
+    .productList {
+        margin-top: 20px; // Spacing above product list
+        padding: 20px; // Padding for the product list container
+        border: 1px solid #ccc; // Border for visual separation
+        border-radius: 8px; // Rounded corners
+        background-color: #f9f9f9; // Light background for the list
+        max-height: 60vh; // Control the height of the product list
+        overflow-y: auto; // Enable vertical scrolling if the list exceeds max height
+
+        table {
+            width: 100%; // Full width for the table
+            border-collapse: collapse; // Remove space between borders
+            thead {
+                background-color: #007bff; // Header background color
+                color: white; // Header text color
+            }
+            th, td {
+                padding: 10px; // Padding for table cells
+                border: 1px solid #ccc; // Border for table cells
+                text-align: left; // Align text to the left
+            }
+
+            tr:hover {
+                background-color: #f0f0f0; // Change background on row hover
+            }
+
+            button {
+                margin-left: 10px; // Space between buttons
+                padding: 5px 10px; // Padding for buttons
+                border: none; // Remove border
+                border-radius: 4px; // Rounded corners for buttons
+                cursor: pointer; // Change cursor on hover
+                background-color: #007bff; // Bootstrap primary color
+                color: white; // White text for buttons
+
+                &:hover {
+                    background-color: #0056b3; // Darker blue on hover
+                }
+
+                &:focus {
+                    outline: 2px solid #0056b3; // Outline on focus
+                }
+            }
+        }
+    }
+}
+
+// Responsive design for smaller screens
+@media (max-width: 768px) {
+    .dashboard {
+        margin-left: 20px; // Adjust margin for smaller screens
+        width: calc(100% - 20px); // Full width minus margin
+    }
+    .details {
+        flex-direction: column; // Stack cards vertically on small screens
     }
 }
