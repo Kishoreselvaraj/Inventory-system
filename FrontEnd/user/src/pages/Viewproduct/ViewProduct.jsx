@@ -8,12 +8,14 @@ function ViewProduct() {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  console.log(product);
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(`http://localhost:5000/user/product/get-item/${id}`);
         setProduct(response.data);
+        // console.log(product);
       } catch (error) {
         setError(error.response ? error.response.data.message : error.message); // Improved error handling
       } finally {
@@ -31,10 +33,12 @@ function ViewProduct() {
   if (!product) return <div>No product found.</div>;
 
   // Construct the image URL based on the path defined in your Express server
-  const imageUrl = `http://localhost:5000/images/${product.image}`; // Assuming product.image contains the filename
+  const imageUrl = `http://localhost:5000/${product.image}`;
+
 
   return (
     <div className="view-product">
+      
       <h1>{product.name}</h1>
       <img src={imageUrl} alt={product.name} />
       <p>Category: {product.category}</p>

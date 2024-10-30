@@ -81,7 +81,7 @@ function Product() {
         <div className="product-details">
           <p><strong>Product Name:</strong> {selectedProduct.name}</p>
           <p><strong>Category:</strong> {selectedProduct.category}</p>
-          <img src={selectedProduct.image} alt={selectedProduct.name} width="100" />
+          <img src={"http://localhost:5000"+selectedProduct.image} alt={selectedProduct.name} width="100" />
         </div>
       )}
 

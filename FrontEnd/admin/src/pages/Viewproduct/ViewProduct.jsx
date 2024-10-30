@@ -28,7 +28,7 @@ function ViewProduct() {
   if (error) return <div>Error: {error}</div>;
 
   // Construct the image URL based on the path defined in your Express server
-  const imageUrl = `http://localhost:5000/images/${product.image}`; // Assuming product.image contains the filename
+  const imageUrl = `http://localhost:5000/${product.image}`; // Assuming product.image contains the filename
 
   return (
     <div className="view-product">

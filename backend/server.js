@@ -6,6 +6,7 @@ const app= express();
 // Middleware 
 app.use(cors());
 app.use(express.json());
+app.use(express.static('uploads'));
 // Router 
 const ProductRouter = require('./Router/Product.Router.jsx');
 const userRouter = require('./Router/UserLogin.jsx');
