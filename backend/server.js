@@ -8,6 +8,7 @@ app.use(cors());
 app.use(express.json());
 // Router 
 const ProductRouter = require('./Router/Product.Router.jsx');
+const userRouter = require('./Router/UserLogin.jsx');
 const PORT=process.env.PORT; 
 app.listen(process.env.PORT||3000,()=>{
     console.log(`Server running on the port ${PORT}`);
@@ -23,3 +24,5 @@ mongoose.connect(process.env.MONGO_URL)
 
 // Get, Post, Put, Detete Products
 app.use('/admin/product',ProductRouter);
+app.use('/user',userRouter);
+

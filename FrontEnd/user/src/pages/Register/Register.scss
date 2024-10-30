@@ -1,0 +1,67 @@
+// Variables for colors to ensure consistency
+$background-color: #f4f4f9;
+$form-background-color: #fff;
+$text-color: #333;
+$label-color: #555;
+$button-color: #007bff;
+$button-hover-color: #0056b3;
+$border-color: #ccc;
+
+// Container to center the register form
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: $background-color;
+
+  // Register form styling
+  .register-form {
+    background: linear-gradient(to right, lightblue, white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 1rem;
+      color: $text-color;
+      font-size: 1.5rem;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin: 0.5rem 0 0.25rem;
+      color: $label-color;
+      font-size: 0.9rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .register-button {
+      width: 100%;
+      padding: 0.7rem;
+      background-color: $button-color;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $button-hover-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.view-product {
+    display: flex;
+    margin-left: 400px; // Adjusts the dashboard width
+    width: calc(100% - 400px); // Ensures the width is responsive
+    height: 100vh;
+    flex-direction: column;
+    align-items: center; // Center align items horizontally
+    justify-content: center; // Center align items vertically
+    padding: 20px; // Adds padding around the content
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Optional: Adds shadow for depth
+    background-color: #f9f9f9; // Light background color for contrast
+  
+    h1 {
+      font-size: 2em; // Increases font size for the title
+      margin-bottom: 20px; // Adds space below the title
+    }
+  
+    img {
+      max-width: 100%; // Responsive image
+      height: auto; // Maintain aspect ratio
+      border-radius: 8px; // Optional: Rounds image corners
+      margin-bottom: 20px; // Adds space below the image
+    }
+  
+    p {
+      font-size: 1.2em; // Increases font size for product details
+      margin: 10px 0; // Adds space above and below paragraphs
+    }
+  
+    button {
+      margin-top: 20px; // Adds space above the button
+      padding: 10px 20px; // Button padding
+      background-color: #007bff; // Primary button color
+      color: white; // Button text color
+      border: none; // Removes default border
+      border-radius: 5px; // Rounds button corners
+      cursor: pointer; // Changes cursor to pointer
+  
+      &:hover {
+        background-color: #0056b3; // Darker color on hover
+      }
+    }
+  }
+  
