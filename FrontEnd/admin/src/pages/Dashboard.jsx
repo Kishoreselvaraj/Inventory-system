@@ -14,7 +14,7 @@ function Dashboard() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/admin/product/get-items');
+        const response = await axios.get('https://inventory-system-vert.vercel.app/admin/product/get-items');
         setProducts(response.data);
       } catch (error) {
         setError(error.message);
@@ -28,7 +28,7 @@ function Dashboard() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/admin/product/delete-item/${id}`);
+      await axios.delete(`https://inventory-system-vert.vercel.app/admin/product/delete-item/${id}`);
       setProducts((prev) => prev.filter((prod) => prod._id !== id)); // Remove product from state
       alert(`Product has been deleted`);
     } catch (error) {

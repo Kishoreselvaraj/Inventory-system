@@ -11,7 +11,7 @@ function Product() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/admin/product/get-items');
+        const response = await axios.get('https://inventory-system-vert.vercel.app/admin/product/get-items');
         setProducts(response.data);
       } catch (error) {
         setError(error.message);
@@ -49,7 +49,7 @@ function Product() {
     formData.append('category', product.category);
 
     try {
-      const response = await axios.post("http://localhost:5000/admin/product/post-item", formData, {
+      const response = await axios.post("https://inventory-system-vert.vercel.app/admin/product/post-item", formData, {
         headers: {
           'Content-Type': 'multipart/form-data', // Set content type for file upload
         },
