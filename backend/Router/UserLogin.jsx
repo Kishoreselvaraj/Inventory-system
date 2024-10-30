@@ -1,6 +1,6 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
-const Register = require('../models/user.js');
+const Register = require('../Models/user');
 const StoredProduct = require('../models/addproduct');
 const userRouter = express.Router();
 const cors = require('cors');
