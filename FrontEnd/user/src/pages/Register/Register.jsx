@@ -19,7 +19,7 @@ function Register() {
       return;
     }
     try {
-       await axios.post('http://localhost:5000/user/register', { stallName, email, password });
+       await axios.post('https://inventory-system-vert.vercel.app/user/register', { stallName, email, password });
       setMessage({ type: "success", text: "Registered successfully!" });
       navigate('/login');
     } catch (error) {

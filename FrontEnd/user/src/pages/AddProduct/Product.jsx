@@ -13,7 +13,7 @@ function Product() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/admin/product/get-items');
+        const response = await axios.get('https://inventory-system-vert.vercel.app/admin/product/get-items');
         setProducts(response.data);
       } catch (error) {
         setError(error.message || "Could not fetch products.");
@@ -41,7 +41,7 @@ function Product() {
     }
 
     try {
-      await axios.post("http://localhost:5000/user/product/store-item", {
+      await axios.post("https://inventory-system-vert.vercel.app/user/product/store-item", {
         productId: selectedProduct._id,
         name: selectedProduct.name,
         image: selectedProduct.image,
@@ -81,7 +81,7 @@ function Product() {
         <div className="product-details">
           <p><strong>Product Name:</strong> {selectedProduct.name}</p>
           <p><strong>Category:</strong> {selectedProduct.category}</p>
-          <img src={"http://localhost:5000"+selectedProduct.image} alt={selectedProduct.name} width="100" />
+          <img src={"https://inventory-system-vert.vercel.app"+selectedProduct.image} alt={selectedProduct.name} width="100" />
         </div>
       )}
 

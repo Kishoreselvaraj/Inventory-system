@@ -13,7 +13,7 @@ function Billing() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/user/product/get-items');
+        const response = await axios.get('https://inventory-system-vert.vercel.app/user/product/get-items');
         setProducts(response.data);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -61,7 +61,7 @@ function Billing() {
 
     // Update quantity in the backend
     try {
-      await axios.put(`http://localhost:5000/user/product/update-item/${productId}`, { quantity: updatedQuantity });
+      await axios.put(`https://inventory-system-vert.vercel.app/user/product/update-item/${productId}`, { quantity: updatedQuantity });
     } catch (error) {
       console.error("Error updating product quantity:", error);
       // Optionally, revert the local state if the update fails
@@ -88,7 +88,7 @@ function Billing() {
         const newQuantity = item.product.quantity - item.quantity; // Calculate new quantity
         console.log(`Processing payment for product ID: ${item.product._id}, new quantity: ${newQuantity}`);
         try {
-          await axios.put(`http://localhost:5000/user/product/update-item/${item.product._id}`, { quantity: newQuantity });
+          await axios.put(`https://inventory-system-vert.vercel.app/user/product/update-item/${item.product._id}`, { quantity: newQuantity });
         } catch (error) {
           console.error("Error updating product quantity:", error);
         }

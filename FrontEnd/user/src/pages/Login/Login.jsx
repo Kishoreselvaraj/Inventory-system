@@ -17,7 +17,7 @@ function Login() {
     setError(null); // Reset any previous errors
 
     try {
-      const response = await axios.post('http://localhost:5000/user/login', { email, password }); // Replace with your actual login endpoint
+      const response = await axios.post('https://inventory-system-vert.vercel.app/user/login', { email, password }); // Replace with your actual login endpoint
       console.log(response.data); // You can log response data for debugging
       navigate('/dashboard', { state: { email } }); // Redirect to the desired page after login
     } catch (error) {

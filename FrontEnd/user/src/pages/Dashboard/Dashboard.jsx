@@ -17,7 +17,7 @@ function Dashboard() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/user/product/get-items');
+        const response = await axios.get('https://inventory-system-vert.vercel.app/user/product/get-items');
         setProducts(response.data);
       } catch (error) {
         setError(error.response ? error.response.data.message : error.message); // Improved error handling
@@ -31,7 +31,7 @@ function Dashboard() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/user/product/delete-item/${id}`);
+      await axios.delete(`https://inventory-system-vert.vercel.app/user/product/delete-item/${id}`);
       setProducts((prev) => prev.filter((prod) => prod._id !== id)); 
       alert(`Product has been deleted`);
     } catch (error) {

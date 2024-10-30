@@ -13,7 +13,7 @@ function ViewProduct() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/user/product/get-item/${id}`);
+        const response = await axios.get(`https://inventory-system-vert.vercel.app/user/product/get-item/${id}`);
         setProduct(response.data);
         // console.log(product);
       } catch (error) {
@@ -33,7 +33,7 @@ function ViewProduct() {
   if (!product) return <div>No product found.</div>;
 
   // Construct the image URL based on the path defined in your Express server
-  const imageUrl = `http://localhost:5000/${product.image}`;
+  const imageUrl = `https://inventory-system-vert.vercel.app/${product.image}`;
 
 
   return (
