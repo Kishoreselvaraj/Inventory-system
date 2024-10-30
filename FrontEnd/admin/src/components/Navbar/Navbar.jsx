@@ -9,7 +9,7 @@ function Navbar() {
                 <ul>
                     <li><Link to={'/dashboard'}>Overview</Link></li>
                     <li><Link to={'/addproduct'}>Add product</Link></li>
-                    <li><Link to={'/users'}>Users</Link></li>
+                    
                 </ul>
             </nav>
         </div>
